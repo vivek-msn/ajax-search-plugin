@@ -1,6 +1,0 @@
-{
-    "require": {
-        "composer/composer": "^2.7",
-        "aura/autoload": "^2.0"
-    }
-}
