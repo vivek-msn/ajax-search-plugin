@@ -1,0 +1,8 @@
+// File: composer.json
+{
+    "autoload": {
+        "psr-4": {
+            "MyNamespace\\": "ajax-search-plugin/"
+        }
+    }
+}

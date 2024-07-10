@@ -8,7 +8,9 @@ License: GPL-2.0-or-later
 License URI: https://opensource.org/licenses/GPL-2.0
 Text Domain: ajax-search
 */
+?>
 
+<?php
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
     die;
@@ -20,12 +22,10 @@ define( 'AJAX_SEARCH_DIR', plugin_dir_path( __FILE__ ) );
 define( 'AJAX_SEARCH_URL', plugin_dir_url( __FILE__ ) );
 
 // Include necessary files
-require 'vendor/autoload.php'; // Composer's autoload file
-use AJAX-SEARCH-PLUGIN\includes\AjaxSearch;
+include_once AJAX_LIVE_SEARCH_PLUGIN_DIR . 'includes/class-ajax-search.php';
 
 // Initialize the plugin
-function runajaxSearch() {
-    $plugin = new AJAX_Search();
-    $plugin->run();
+function ajaxsearchinit() {
+    $ajaxsearch = new AJAX_Live_Search();
 }
-runajaxSearch();
+add_action( 'plugins_loaded', 'ajax_live_search_init' );
